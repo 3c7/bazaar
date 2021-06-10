@@ -40,10 +40,10 @@ class Bazaar:
         return self.session.post(self.baseurl, data={"query": "get_yarainfo", "yara_rule": rule_name, "limit": limit}).json()
 
     def query_signing_issuer(self, common_name: str):
-        return self.session.post(self.baseurl, data={"query": "get_issuerinfo", "issuer_cn": common_name, "limit": limit}).json()
+        return self.session.post(self.baseurl, data={"query": "get_issuerinfo", "issuer_cn": common_name}).json()
 
     def query_signing_subject(self, common_name: str):
-        return self.session.post(self.baseurl, data={"query": "get_subjectinfo", "subject_cn": common_name, "limit": limit}).json()
+        return self.session.post(self.baseurl, data={"query": "get_subjectinfo", "subject_cn": common_name}).json()
 
     def query_recent(self, selector: Union[int, str] = "time"):
         if isinstance(selector, int):

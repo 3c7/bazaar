@@ -4,6 +4,13 @@ version = "0.0.1"
 description = "CLI wrapper for malware bazaar API (bazaar.abuse.ch)"
 authors = ["3c7 <3c7@posteo.de>"]
 license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Security",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only"
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"

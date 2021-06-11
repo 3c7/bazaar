@@ -12,6 +12,8 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "License :: OSI Approved :: MIT License"
 ]
+homepage = "https://github.com/3c7/bazaar"
+repository = "https://github.com/3c7/bazaar"
 
 [tool.poetry.dependencies]
 python = "^3.8"

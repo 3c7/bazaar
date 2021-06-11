@@ -9,7 +9,8 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Topic :: Security",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only"
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License"
 ]
 
 [tool.poetry.dependencies]

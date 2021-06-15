@@ -1,5 +1,5 @@
 # (Malware)Bazaar
-**An [Malwarebazaar](https://bazaar.abuse.ch) API wrapper and CLI**
+**A [MalwareBazaar](https://bazaar.abuse.ch) API wrapper and CLI**
 
 ## Installation
 ```

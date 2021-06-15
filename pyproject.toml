@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "malwarebazaar"
-version = "0.0.1"
+version = "0.0.2"
 description = "CLI wrapper for malware bazaar API (bazaar.abuse.ch)"
 authors = ["3c7 <3c7@posteo.de>"]
 license = "MIT"
@@ -12,6 +12,8 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "License :: OSI Approved :: MIT License"
 ]
+homepage = "https://github.com/3c7/bazaar"
+repository = "https://github.com/3c7/bazaar"
 
 [tool.poetry.dependencies]
 python = "^3.8"

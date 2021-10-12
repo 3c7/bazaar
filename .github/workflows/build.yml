@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: ubuntu-16.04
+          - os: ubuntu-20.04
             artifact_name: bazaar
             asset_name: linux
           #- os: windows-2019

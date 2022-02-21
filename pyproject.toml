@@ -16,16 +16,16 @@ homepage = "https://github.com/3c7/bazaar"
 repository = "https://github.com/3c7/bazaar"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.8,<3.11"
 click = "^8.0.1"
-rich = "^10.2.2"
+rich = "^11.2.0"
 requests = "^2.25.1"
-PyYAML = "^5.4.1"
+PyYAML = "^6.0"
 pyzipper = "^0.3.5"
 
 [tool.poetry.dev-dependencies]
-pyinstaller = "^4.3"
-black = "^21.5b2"
+pyinstaller = "^4.9"
+black = "^22.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

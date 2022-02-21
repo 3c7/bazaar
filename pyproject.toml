@@ -26,6 +26,9 @@ pyzipper = "^0.3.5"
 [tool.poetry.dev-dependencies]
 pyinstaller = "^4.9"
 black = "^22.1.0"
+mypy = "^0.931"
+types-PyYAML = "^6.0.4"
+types-requests = "^2.27.10"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

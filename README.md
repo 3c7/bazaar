@@ -2,10 +2,20 @@
 **A [MalwareBazaar](https://bazaar.abuse.ch) API wrapper and CLI**
 
 ## Installation
+If you want to use the API only:
+
 ```
 pip install malwarebazaar
 ```
-or, for pure cli usage, you can grab one of the [prebuilt binaries](https://github.com/3c7/bazaar/releases/).
+
+If you want to use the CLI:
+
+```
+pip install malwarebazaar[cli]
+```
+
+_Note: Previous versions also included pre-built binaries, however, I stopped adding them. Please just use a local python environment instead._
+
 ## Usage
 ### Python
 ```python

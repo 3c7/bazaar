@@ -5,7 +5,10 @@
 ```
 pip install malwarebazaar
 ```
-or, for pure cli usage, you can grab one of the [prebuilt binaries](https://github.com/3c7/bazaar/releases/).
+~~or, for pure cli usage, you can grab one of the [prebuilt binaries](https://github.com/3c7/bazaar/releases/)~~.
+
+The creation of prebuilt binaries was removed in v0.1.5.
+
 ## Usage
 ### Python
 ```python

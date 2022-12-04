@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "malwarebazaar"
-version = "0.1.6"
-description = "CLI wrapper for malware bazaar API (bazaar.abuse.ch)"
+version = "0.2.0"
+description = "CLI wrapper for malware bazaar API (bazaar.abuse.ch) and YARAify API (yaraify.abuse.ch)"
 authors = ["3c7 <3c7@posteo.de>"]
 license = "MIT"
 readme = "README.md"
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 5 - Production/Stable",
     "Topic :: Security",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
@@ -27,13 +27,18 @@ pydantic = "^1.10.2"
 [tool.poetry.dev-dependencies]
 pyinstaller = "^5.5"
 black = "^22.10.0"
-mypy = "^0.982"
 types-PyYAML = "^6.0.12"
 types-requests = "^2.28.11.2"
 
 [tool.poetry.extras]
 cli = ["rich", "click", "typer"]
 
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^5.5"
+black = "^22.10.0"
+types-PyYAML = "^6.0.12"
+types-requests = "^2.28.11.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

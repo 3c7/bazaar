@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "malwarebazaar"
-version = "0.2.0-beta1"
+version = "0.2.0-beta2"
 description = "CLI wrapper for malware bazaar API (bazaar.abuse.ch) and YARAify API (yaraify.abuse.ch)"
 authors = ["3c7 <3c7@posteo.de>"]
 license = "MIT"

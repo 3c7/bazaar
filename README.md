@@ -197,8 +197,8 @@ ed3d540886144d18a9f15c349cff1a89080dbb9e62ad224efbe83307af3171f2 [NanoCore] [@ab
 ```text
 $ yaraify init myapikey --malpedia mymalpediaapikey
 Successfully created config:
-{"api_key": "bazaar_api_key", "yaraify": {"api_key": "myapikey", "mymalpediaapikey": 
-"9664d7308cfbc0c33f509d28afc8145e2580ad36", "csv_columns": {"rule_name": "rule_name", "author": "author", "uuid": "yarahub_uuid"}}, 
+{"api_key": "bazaar_api_key", "yaraify": {"api_key": "myapikey", "malpedia_key": 
+"mymalpediaapikey", "csv_columns": {"rule_name": "rule_name", "author": "author", "uuid": "yarahub_uuid"}}, 
 "csv_columns": {"md5": "md5_hash", "sha1": "sha1_hash", "sha256": "sha256_hash", "imphash": "imphash", "signature": "signature", "tags": "tags"}}
 $ yaraify query hash 7a6fcc2f0115c73bc66e9eacf74af4e5c11b06d600fd2038a289d5ee2163d459
 Sample 1/1

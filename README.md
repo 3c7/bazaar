@@ -100,16 +100,33 @@ Please just use a local python environment instead._
 
 ### Python API
 ```python
-from malwarebazaar.api import Bazaar
-from malwarebazaar.models import Sample
+from malwarebazaar import Bazaar, Yaraify
+from malwarebazaar.models import Sample, YaraRule
 
 b = Bazaar(
+    api_key="myapikey"
+)
+y = Yaraify(
     api_key="myapikey"
 )
 response = b.query_recent()
 samples = [Sample(**sample_dict) for sample_dict in response["data"]]
 file_content = b.download_file(samples[0].sha256_hash)  # or response["data"][0]["sha256_hash"]
+
+response = y.query_recent_yara()
+yaras = [YaraRule(**yara_dict) for yara_dict in response["data"]]
+for yara in yaras:
+    if yara.rule_name != "classified":
+        rule = y.download_yara(yara.yarahub_uuid)
+        print(rule)
+        break
 ```
+
+There is no dedicated API documentation, however, the function names are pretty self-explanatory and you can just take
+a look at the respective API functions here:
+
+- Bazaar: [bazaar.py](malwarebazaar/api/bazaar.py)
+- YARAify: [yaraify.py](malwarebazaar/api/yaraify.py)
 
 ### CLI
 

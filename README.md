@@ -168,6 +168,12 @@ f670080b1f42d1b70a37adda924976e6d7bd62bf77c35263aff97e7968291807.zip: Zip archiv
 $ bazaar download f670080b1f42d1b70a37adda924976e6d7bd62bf77c35263aff97e7968291807 --unzip
 $ file f670080b1f42d1b70a37adda924976e6d7bd62bf77c35263aff97e7968291807.exe 
 f670080b1f42d1b70a37adda924976e6d7bd62bf77c35263aff97e7968291807.exe: PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows
+$ bazaar recent -s -l5
+c2ae8ce5833306a5f311cf95a75271d9f25c037f177f935dff1d27b99b9af549 [Undetected] [@andretavare5] (exe)
+b885520ef95e0c2159243d800bda652bd2b787098a9e1d29718a6e73b1204a36 [Undetected] [@andretavare5] (exe)
+8b4fa170c0a68f07870823524579484ec7ba31b058ae80e23b8a29d3bfe96d84 [Undetected] [@andretavare5] (exe)
+ed3d540886144d18a9f15c349cff1a89080dbb9e62ad224efbe83307af3171f2 [NanoCore] [@abuse_ch] (exe, NanoCore, RAT)
+26507309b1d73937d7f62b28e9065e1fe94a74b3b293b263140370fa6cfa90f8 [Undetected] [@andretavare5] (exe)
 ```
 
 #### `yaraify` example
@@ -177,6 +183,58 @@ Successfully created config:
 {"api_key": "bazaar_api_key", "yaraify": {"api_key": "myapikey", "mymalpediaapikey": 
 "9664d7308cfbc0c33f509d28afc8145e2580ad36", "csv_columns": {"rule_name": "rule_name", "author": "author", "uuid": "yarahub_uuid"}}, 
 "csv_columns": {"md5": "md5_hash", "sha1": "sha1_hash", "sha256": "sha256_hash", "imphash": "imphash", "signature": "signature", "tags": "tags"}}
+$ yaraify query hash 7a6fcc2f0115c73bc66e9eacf74af4e5c11b06d600fd2038a289d5ee2163d459
+Sample 1/1
+                ╷                                                                                
+  Filename      │ None                                                                           
+  Filesize      │ 2691072 bytes                                                                  
+  Filetype      │ application/x-dosexec                                                          
+  Sightings     │ First-Seen: 2022-12-22 11:35:25                                                
+                │ Last-Seen:  None                                                               
+                │ Sightings:  1                                                                  
+  Hashes        │ MD5:        6ae5d1343e41801bf5a501055f43818d                                   
+                │ SHA1:       18d068b535785ec16d56c0f421addb35232fe377                           
+                │ SHA256:     7a6fcc2f0115c73bc66e9eacf74af4e5c11b06d600fd2038a289d5ee2163d459   
+                │ SHA3-384:                                                                      
+                │ cc7dab7054f50e9bdcef92d4bdfbc2b27bcca1ea025f2d340703083ae819a2c6e312c20317804  
+                │ 078a4ce124e91f74a64                                                            
+                │ Icon Dhash: None                                                               
+  Import Hashes │ Imphash:    5c7397fd7c1832e37a3cb00b6ee7c377                                   
+                │ Gimphash:   None                                                               
+                │ Telfhash:   None                                                               
+  Fuzzy Hashes  │ Ssdeep:                                                                        
+                │ 49152:NWrMtlmeF2RBzD8CSkkZA2loXISPEB8ClDl1mZDdeP7RWUOIQ:aMtlmeF2RBz1SkkZAKWIS  
+                │ YFgDoPl8IQ                                                                     
+                │ Tlsh:                                                                          
+                │ T14EC5AE83B7C690F1DB963030051F976EEA7DBE285C749607B3A13A6F69302016B2D79D       
+                │                                                                                
+                ╵                                                                                
+Task 1/1
+                     ╷                                                 
+  Task ID            │ ba3f2653-81ec-11ed-a7d0-42010aa4000b            
+  YARAify Parameters │ ClamAV ✔ Unpack ✖ Share ✔                       
+  Detections         │ Clam-AV:     No Clam-AV results                 
+                     │ Name:        BitcoinAddress                     
+                     │ Author:      Didier Stevens (@DidierStevens)    
+                     │ Description: Contains a valid Bitcoin address   
+                     │ TLP:         WHITE                              
+                     │                                                 
+                     │ Name:        malware_shellcode_hash             
+                     │ Author:      JPCERT/CC Incident Response Group  
+                     │ Description: detect shellcode api hash value    
+                     │ TLP:         WHITE                              
+                     │                                                 
+                     │ Name:        meth_get_eip                       
+                     │ Author:      Willi Ballenthin                   
+                     │ Description: No description provided.           
+                     │ TLP:         WHITE                              
+                     │                                                 
+                     │ Name:        pdb_YARAify                        
+                     │ Author:      @wowabiy314                        
+                     │ Description: PDB                                
+                     │ TLP:         WHITE                              
+                     │                                                 
+                     ╵                             
 $ yaraify recent -s -l 5
 classified [classified] (4e00e916-1b7a-4020-b64a-701ff3390ca9)
 classified [classified] (8f965345-b8d2-4a55-a9c3-2ff23a03ed1e)

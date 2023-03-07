@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "malwarebazaar"
-version = "0.2.1"
+version = "0.2.2"
 description = "CLI wrapper for malware bazaar API (bazaar.abuse.ch) and YARAify API (yaraify.abuse.ch)"
 authors = ["3c7 <3c7@posteo.de>"]
 license = "MIT"
@@ -20,7 +20,7 @@ python = "^3.8,<3.12"
 requests = "^2.28.1"
 PyYAML = "^6.0"
 pyzipper = "^0.3.6"
-rich = { version = "^12.6.0", optional = true }
+rich = { version = "^13.3.2", optional = true }
 typer = { version = "^0.7.0", optional = true }
 pydantic = "^1.10.4"
 

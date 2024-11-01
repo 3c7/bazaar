@@ -16,7 +16,7 @@ homepage = "https://github.com/3c7/bazaar"
 repository = "https://github.com/3c7/bazaar"
 
 [tool.poetry.dependencies]
-python = "^3.8,<3.13"
+python = "^3.9,<3.14"
 requests = "^2.31.0"
 PyYAML = "^6.0.1"
 pyzipper = "^0.3.6"

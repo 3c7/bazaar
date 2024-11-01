@@ -1,16 +1,16 @@
 [tool.poetry]
 name = "malwarebazaar"
-version = "0.2.6"
+version = "0.2.7"
 description = "CLI wrapper for malware bazaar API (bazaar.abuse.ch) and YARAify API (yaraify.abuse.ch)"
 authors = ["3c7 <3c7@posteo.de>"]
 license = "MIT"
 readme = "README.md"
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
-    "Topic :: Security",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
-    "License :: OSI Approved :: MIT License"
+  "Development Status :: 5 - Production/Stable",
+  "Topic :: Security",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
 ]
 homepage = "https://github.com/3c7/bazaar"
 repository = "https://github.com/3c7/bazaar"

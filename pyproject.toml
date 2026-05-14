@@ -1,41 +1,48 @@
-[tool.poetry]
+[project]
 name = "malwarebazaar"
-version = "0.2.8"
+version = "0.2.9"
 description = "CLI wrapper for malware bazaar API (bazaar.abuse.ch) and YARAify API (yaraify.abuse.ch)"
-authors = ["3c7 <3c7@posteo.de>"]
+authors = [
+    {name="3c7", email="3c7@posteo.de>"}
+]
 license = "MIT"
 readme = "README.md"
-classifiers = [
-  "Development Status :: 5 - Production/Stable",
-  "Topic :: Security",
-  "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3 :: Only",
-  "License :: OSI Approved :: MIT License",
+requires-python = ">=3.10,<3.15"
+
+dynamic = [ "classifiers" ]
+
+dependencies = [
+    "requests (>=2.34.2)",
+    "PyYAML (>=6.0.3)",
+    "pyzipper (>=0.4.0)",
+    "pydantic (>=2.13.4)"
 ]
+
+[tool.poetry]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Security"
+]
+
+[project.urls]
 homepage = "https://github.com/3c7/bazaar"
 repository = "https://github.com/3c7/bazaar"
 
-[tool.poetry.dependencies]
-python = "^3.9,<3.14"
-requests = "^2.31.0"
-PyYAML = "^6.0.1"
-pyzipper = "^0.3.6"
-rich = { version = "^13.6.0", optional = true }
-typer = { version = "^0.9.0", optional = true }
-pydantic = "^2.4.2"
-
-[tool.poetry.extras]
-cli = ["rich", "click", "typer"]
-
-
-[tool.poetry.group.dev.dependencies]
-types-PyYAML = "^6.0.12.12"
-types-requests = "^2.31.0.8"
-
-[build-system]
-requires = ["poetry-core>=1.1.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
+[project.scripts]
 bazaar = "malwarebazaar.bazaar:bazaar_app"
 yaraify = "malwarebazaar.yaraify:yaraify_app"
+
+[project.optional-dependencies]
+cli = [
+    "rich (>=15.0.0)",
+    "click (>=8.3.3)",
+    "typer (>=0.25.1)"
+]
+
+[tool.poetry.group.dev.dependencies]
+types-PyYAML = "^6.0.12.20260510"
+types-requests = "^2.33.0.20260513"
+
+[build-system]
+requires = ["poetry-core>=2"]
+build-backend = "poetry.core.masonry.api"
